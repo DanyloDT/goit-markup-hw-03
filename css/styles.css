@@ -56,6 +56,7 @@ button {
  .logo-header {
     /* display: flex;
     align-items: center; */
+    margin-right: 76px;
 
     color: #4D5AE5;
     font-family: 'Raleway', sans-serif;
@@ -74,7 +75,7 @@ button {
 
 .menu-nav {
     display: flex;
-    margin-left: 76px;
+    gap: 40px;
 }
 
 .menu-nav .link {
@@ -87,10 +88,6 @@ button {
     font-size: 16px;
     line-height: 1.5;
 } 
-
-.menu-nav .item + .item {
-    margin-left: 40px;
-}
 
 .menu-nav .link:hover,
 .menu-nav .link:focus,
@@ -106,10 +103,7 @@ button {
 
 .contact-list {
     display: flex;
-}
-
-.contact-list .item + .item {
-    margin-left: 40px;
+    gap: 40px;
 }
 
 .contact-list .link {
@@ -153,7 +147,11 @@ button {
 }
 
 .modal-btn {
-    padding: 16px 32px;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
     
     color: #FFFFFF;
     font-family: var(--primary-font);
@@ -163,7 +161,7 @@ button {
     letter-spacing: 0.04em;
        
     background: #4D5AE5;
-    border: 1px solid transparent;
+    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
@@ -209,24 +207,26 @@ button {
 }
 
 /* ------------------секція 1----------------- */
-.services-section {
+/* .services-section {
     padding-bottom: 0;
-}
+} */
 .services-list {
     display: flex;
-    gap: 24px;
-    
+    gap: 24px;    
 }
-
+.services-list >.item {
+    flex-basis: calc( (100% - 3*24px)/4);
+}
 /* ------------------/секція 1----------------- */
 /* ------------------секція 2----------------- */
 .work-list {
     display: flex;
     gap: 24px;
 }
-/* .work-list .item {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-} */
+.work-list .item {
+    flex-basis: calc((100% - 24px*2)/3);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
 
 /* ------------------/секція 2----------------- */
 /* ------------------секція 3----------------- */
@@ -240,14 +240,16 @@ button {
 
 .personnel-list .item {
     background: #FFFFFF;
-    /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-        border-radius: 0px 0px 4px 4px; */
+    flex-basis: calc((100% - 24px*3)/4);
+    /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); */
+    
 }
 
 
 .card-content {
     padding: 32px 16px ;
     text-align: center;
+    border-radius: 0px 0px 4px 4px;
 }
 /* ------------------/секція 3----------------- */
 
@@ -270,7 +272,7 @@ button {
     line-height: 1.17;
    
 
-    display: flex;
+    display: inline-block;
     align-items: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -329,6 +331,7 @@ button {
     background: #404BBF;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+    border: 1px solid transparent;
 }
 
 .filters-content {
@@ -336,6 +339,9 @@ button {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
+}
+.filters-content .item {
+    flex-basis: calc((100% - 24px*2)/3);
 }
 
 .filters-title {
@@ -348,7 +354,7 @@ button {
     letter-spacing: 0.02em;
 }
 .card-filters {
-    padding: 32px 0 32px 16px;
+    padding: 32px 16px;
     border: 1px solid #E7E9FC;
     border-top: none;
 }
