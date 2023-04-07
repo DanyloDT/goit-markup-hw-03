@@ -11,6 +11,7 @@ body {
     font-family: var(--primary-font);
     letter-spacing: 0.02em;
 }
+
 .list {
     list-style: none;
 }
@@ -18,50 +19,108 @@ body {
 .link {
     text-decoration: none;
 }
+h1,h2,h3,h4,h5,h6,ul,p {
+    margin: 0;
+    padding:0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    /* outline: 2px solid rgb(240, 97, 8); */
+}
 /* =================== Components===================*/
 
 /* =================== /Components===================*/
 /* Шапка сторінки */
 /*=================== page-header===================*/
+.page-header {
+    border-bottom: 1px solid #E7E9FC ;
+}
+.page-nav {
+    display: flex;
+    align-items: center;
+}
 
  .logo-header {
+    /* display: flex;
+    align-items: center; */
+
     color: #4D5AE5;
-    
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.17;
     
-    display: flex;
-    align-items: center;
+    
     letter-spacing: 0.03em;
     text-transform: uppercase;    
 }
 
- .logo-header .active {
+.logo-header .active {
     color: #2E2F42;
 }
 
-.menu-link {
+.menu-nav {
+    display: flex;
+    margin-left: 76px;
+}
+
+.menu-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     color: var(--secondly-text-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
 } 
-.menu-link:hover,
-.menu-link:focus,
-.contact-info:hover,
-.contact-info:focus {
+
+.menu-nav .item + .item {
+    margin-left: 40px;
+}
+
+.menu-nav .link:hover,
+.menu-nav .link:focus,
+.contact-list .link:hover,
+.contact-list .link:focus {
     color:var(--accent-color);
 }
 
-.contact  {
+.contact-nav  {
     font-style: normal;
+    margin-left: auto;
 }
-.contact-info {
+
+.contact-list {
+    display: flex;
+}
+
+.contact-list .item + .item {
+    margin-left: 40px;
+}
+
+.contact-list .link {
+   
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.5;    
+}
+.container-nav {
+    display: flex;
+    align-items: center;
 }
 
 /*=================== /page-header ===================*/
@@ -70,21 +129,32 @@ body {
 /*=================== hero image ===================*/
 .hero {
     background: #2E2F42;
+    text-align: center;
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .main-title {
-    color: #FFFFFF; 
+    width: 496px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
     
+
+    color: #FFFFFF; 
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
        
-    text-align: center;
+    
        
 }
 
 .modal-btn {
+    padding: 16px 32px;
+    
     color: #FFFFFF;
     font-family: var(--primary-font);
     font-weight: 500;
@@ -92,9 +162,8 @@ body {
     line-height: 1.5;
     letter-spacing: 0.04em;
        
-    cursor: pointer;
-        
     background: #4D5AE5;
+    border: 1px solid transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
@@ -104,9 +173,14 @@ body {
 }
 /*=================== /hero image ===================*/
 /* =================== section ===================== */
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
 
 .section-title {
+    margin-bottom: 72px;
 
     color: var(--secondly-text-color);
     font-weight: 700;
@@ -118,6 +192,8 @@ body {
     text-transform: capitalize;
 }
 .subtitle {
+    margin-bottom: 8px;
+
     color: var(--secondly-text-color);
     font-weight: 500;
     font-size: 20px;
@@ -127,25 +203,67 @@ body {
 }
 .description {
     color: var(--primary-text-color);
+    
     font-size: 16px;
     line-height: 1.5;
 }
+
+/* ------------------секція 1----------------- */
+.services-section {
+    padding-bottom: 0;
+}
+.services-list {
+    display: flex;
+    gap: 24px;
+    
+}
+
+/* ------------------/секція 1----------------- */
+/* ------------------секція 2----------------- */
+.work-list {
+    display: flex;
+    gap: 24px;
+}
+/* .work-list .item {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} */
+
+/* ------------------/секція 2----------------- */
+/* ------------------секція 3----------------- */
 .personnel {
     background: #F4F4FD;
 }
 .personnel-list {
-    background: #FFFFFF;      
+    display: flex;
+    gap: 24px;
 }
+
+.personnel-list .item {
+    background: #FFFFFF;
+    /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        border-radius: 0px 0px 4px 4px; */
+}
+
+
+.card-content {
+    padding: 32px 16px ;
+    text-align: center;
+}
+/* ------------------/секція 3----------------- */
+
+
 /* =================== /section ===================== */
 
 /* =================== footer ======================= */
 .page-footer {
     background: #2E2F42;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
-.logo-foter {
+.logo-footer {
+    margin-bottom: 16px;
 
     color: #4D5AE5;
-    
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -157,13 +275,14 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
 }
-.logo-foter .active {
+.logo-footer .active {
     color: #F4F4FD;
+    
 }
 .page-footer-description {
+    width: 264px;
 
     color: #F4F4FD;
-
     font-size: 16px;
     line-height: 1.5;
 }
@@ -171,18 +290,33 @@ body {
 
 /* ==================Portfolio============== */
 /* =================== section ===================== */
-.filters-btn{
+.filters-section {
+    padding-top: 96px;
+    padding-bottom: 120px;
+    
+}
+
+.filters{
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.filters-btn {
+    padding: 12px 24px ;
+  
+    
     color: #4D5AE5;
     font-family: var(--primary-font);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-
     cursor: pointer;
    
-    display: flex;
+    /* display: flex;
     align-items: center;
-    text-align: center;
+    text-align: center; */
     letter-spacing: 0.04em;
 
     background: #F4F4FD;
@@ -197,11 +331,26 @@ body {
     border-radius: 4px;
 }
 
+.filters-content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
 .filters-title {
+    margin-bottom: 8px;
+
     color: var(--secondly-text-color);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;  
     letter-spacing: 0.02em;
 }
+.card-filters {
+    padding: 32px 0 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+}
 /* =================== /section ===================== */
+
