@@ -31,10 +31,11 @@ img {
 
 button {
     cursor: pointer;
+    font: inherit;
 }
 
 .container {
-    width: 1158px;
+    max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
     margin: auto;
@@ -141,9 +142,7 @@ button {
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
-       
-    
-       
+              
 }
 
 .modal-btn {
@@ -219,6 +218,9 @@ button {
 }
 /* ------------------/секція 1----------------- */
 /* ------------------секція 2----------------- */
+.work-section{
+    padding-top: 0;
+}
 .work-list {
     display: flex;
     gap: 24px;
